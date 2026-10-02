@@ -1,18 +1,43 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useColorScheme } from 'react-native';
+import { Stack } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import { AnimatedSplashOverlay } from '@/components/animated-icon';
-import AppTabs from '@/components/app-tabs';
+import { DatabaseProvider } from '@/db';
+import { useTheme } from '@/theme';
 
-SplashScreen.preventAutoHideAsync();
+function Navigator() {
+  const theme = useTheme();
 
-export default function TabLayout() {
-  const colorScheme = useColorScheme();
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <Stack
+      screenOptions={{
+        headerStyle: { backgroundColor: theme.bg },
+        headerTintColor: theme.text,
+        headerTitleStyle: { fontWeight: '700' },
+        contentStyle: { backgroundColor: theme.bg },
+      }}
+    >
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="nuevo-pedido"
+        options={{ title: 'Nuevo pedido', presentation: 'modal' }}
+      />
+      <Stack.Screen
+        name="producto"
+        options={{ title: 'Producto', presentation: 'modal' }}
+      />
+      <Stack.Screen name="insumo" options={{ title: 'Insumo', presentation: 'modal' }} />
+    </Stack>
+  );
+}
+
+export default function RootLayout() {
+  return (
+    <SafeAreaProvider>
+      <StatusBar style="auto" />
+      <DatabaseProvider>
+        <Navigator />
+      </DatabaseProvider>
+    </SafeAreaProvider>
   );
 }
