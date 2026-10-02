@@ -1,5 +1,5 @@
-export const CURRENCY = 'ARS';
-export const LOCALE = 'es-AR';
+export const CURRENCY = 'PEN';
+export const LOCALE = 'es-PE';
 
 const moneyFormatters = new Map<string, Intl.NumberFormat>();
 

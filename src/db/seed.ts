@@ -32,20 +32,20 @@ const SEED_ITEMS: SeedItem[] = [
 ];
 
 const SEED_PRODUCTS: SeedProduct[] = [
-  { name: 'Espresso', category: 'cafe', priceCents: 2500 },
-  { name: 'Americano', category: 'cafe', priceCents: 2800 },
-  { name: 'Cortado', category: 'cafe', priceCents: 3000 },
-  { name: 'Flat White', category: 'cafe', priceCents: 3500 },
-  { name: 'Latte', category: 'cafe', priceCents: 3500 },
-  { name: 'Cappuccino', category: 'cafe', priceCents: 3300 },
-  { name: 'Mocha', category: 'cafe', priceCents: 3900 },
-  { name: 'Cold Brew', category: 'fria', priceCents: 4200 },
-  { name: 'Iced Latte', category: 'fria', priceCents: 3800 },
-  { name: 'Limonada de menta', category: 'fria', priceCents: 3500 },
-  { name: 'Jugo de naranja', category: 'fria', priceCents: 4000 },
-  { name: 'Medialunas', category: 'panaderia', priceCents: 2000 },
-  { name: 'Tostado de queso y jamón', category: 'panaderia', priceCents: 4500 },
-  { name: 'Cookie de chocolate', category: 'panaderia', priceCents: 2200 },
+  { name: 'Espresso', category: 'cafe', priceCents: 650 },
+  { name: 'Americano', category: 'cafe', priceCents: 750 },
+  { name: 'Cortado', category: 'cafe', priceCents: 850 },
+  { name: 'Flat White', category: 'cafe', priceCents: 1050 },
+  { name: 'Latte', category: 'cafe', priceCents: 1050 },
+  { name: 'Cappuccino', category: 'cafe', priceCents: 950 },
+  { name: 'Mocha', category: 'cafe', priceCents: 1150 },
+  { name: 'Cold Brew', category: 'fria', priceCents: 1200 },
+  { name: 'Iced Latte', category: 'fria', priceCents: 1100 },
+  { name: 'Limonada de menta', category: 'fria', priceCents: 1000 },
+  { name: 'Jugo de naranja', category: 'fria', priceCents: 1100 },
+  { name: 'Medialunas', category: 'panaderia', priceCents: 550 },
+  { name: 'Tostado de queso y jamón', category: 'panaderia', priceCents: 1350 },
+  { name: 'Cookie de chocolate', category: 'panaderia', priceCents: 600 },
 ];
 
 const SEED_RECIPES: Record<string, Record<string, number>> = {
